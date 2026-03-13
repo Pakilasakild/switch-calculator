@@ -18,10 +18,11 @@ int main() {
     char op;
     cout << "Ivesk pirma skaiciu:";
     cin >> x;
-    cout << "Ivesk operacija (+,-,*,/):";
-    cin >> op;
     cout << "Ivesk antra skaiciu:";
     cin >> y;
+    label:
+    cout << "Ivesk operacija (+,-,*,/):";
+    cin >> op;
     switch (op) {
         case '+':
             cout << suma(x, y);
@@ -35,5 +36,8 @@ int main() {
         case '/':
             cout << dalyba(x, y);
             break;
+        default:
+            cout << "Wrong operation!\n";
+            goto label;
     }
 }
